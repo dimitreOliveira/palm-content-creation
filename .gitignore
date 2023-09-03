@@ -1,4 +1,3 @@
-.venvs
 .env
 .streamlit
 .DS_Store
