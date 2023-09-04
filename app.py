@@ -25,6 +25,11 @@ def setup_keys():
     palm.configure(api_key=os.getenv("API_KEY"))
 
 
+def query(prompt: str, defaults: dict):
+    response = palm.generate_text(**defaults, prompt=prompt)
+    return response.result
+
+
 # API_KEY loaded from the `.env` file which is not visible for obvious reasons
 CONFIGS_PATH = "configs.yaml"
 
@@ -47,5 +52,5 @@ generate = st.button("Generate")
 
 if generate:
     with st.spinner("Generating content..."):
-        response = palm.generate_text(**configs["defaults"], prompt=prompt)
-    st.write(response.result)
+        response = query(prompt, configs["defaults"])
+    st.write(response)
