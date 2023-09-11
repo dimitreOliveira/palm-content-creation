@@ -1,5 +1,11 @@
+FEATURE_NAME := palm_creator
+TAG ?= latest
+
 app:
-	streamlit run app.py
+	docker run --rm -p 8501:8501 ${FEATURE_NAME}:${TAG}
+
+build:
+	docker build -t ${FEATURE_NAME}:${TAG} .
 
 lint:
 	isort ./
