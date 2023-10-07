@@ -6,10 +6,10 @@ import streamlit as st
 import yaml
 from dotenv import load_dotenv
 
-CONTEXT = """"
+CONTEXT = """
 Explain the topic of "{}" in a short text format that is targeted at the general public.\n
 The tone of the text should be informative and easy to understand with some examples.
-﻿"""
+"""
 
 st.set_page_config(
     page_title="PaLM-based content creation",

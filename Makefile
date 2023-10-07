@@ -2,7 +2,10 @@ FEATURE_NAME := palm_creator
 TAG ?= latest
 
 app:
-	docker run --rm -p 8501:8501 ${FEATURE_NAME}:${TAG}
+	docker run --rm \
+	-p 8501:8501 \
+	-v $(PWD)/.env/:/app/.env/ \
+	${FEATURE_NAME}:${TAG}
 
 build:
 	docker build -t ${FEATURE_NAME}:${TAG} .
