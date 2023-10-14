@@ -1,6 +1,10 @@
 # PaLM-based content creation
 Create short text content with PaLM API and Streamlit.
 
+---
+Check out the article I wrote to go along with this repository ["Content creation using MakerSuite and PaLM API"](https://dimitreoliveira.medium.com/content-creation-using-makersuite-and-palm-api-3dfc3a924510)
+---
+
 ## Sample output from the app
 
 ![](assets/app_output.png)
